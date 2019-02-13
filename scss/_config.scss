@@ -30,3 +30,9 @@ $background-opacity: 0.7;
         }
     }
 }
+
+@mixin menuLineHoverColor {
+    .btn-line {
+        background: $secondary-color;
+    }
+}
