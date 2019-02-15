@@ -1,0 +1,58 @@
+// Extra large devices (Wide screens)
+@include mediaXl {}
+
+// Large devices (Desktops & laptops)
+@include mediaLg {}
+
+// Medium devices (Tablets and small laptops)
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 1.5rem;
+
+        .nav-item {
+            transform: translate3d(-600%, 0, 0);
+        }
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+
+        .portrait {
+            background: url(/dist/img/portrait_small.jpg);
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+}
+
+// Small devices (Smartphones)
+@include mediaSm {
+    main #home h1 {
+        margin-top: 10vh;
+    }
+}
