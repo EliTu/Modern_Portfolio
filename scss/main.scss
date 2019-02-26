@@ -1,7 +1,6 @@
 // Importing config file with variables and mixins:
 @import "config";
 @import "menu";
-@import "mobile";
 
 // General page:
 
@@ -16,6 +15,7 @@ body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
+    color: set-text-color($primary-color);
 }
 
 // Headings:
@@ -56,7 +56,8 @@ header {
 
 main {
     padding: 4rem;
-    height: 100%;
+    // height: 100%;
+    min-height: calc(100vh - 60px); // sticky footer - calc function of full viewport height - footer height.
 
     .icons {
         margin-top: 1rem;
@@ -79,3 +80,57 @@ main {
         }
     }
 }
+
+// The About page:
+
+// Main content container
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+        'bio-image bio bio'
+        'job-1 job-2 job-3';
+    grid-template-columns: repeat(3, 1fr);
+
+    // Grid areas
+    .bio-image {
+        grid-area: bio-image;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job-1;
+    }
+
+    .job-2 {
+        grid-area: job-2;
+    }
+
+    .job-3 {
+        grid-area: job-3;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        text-align: center;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import "mobile";

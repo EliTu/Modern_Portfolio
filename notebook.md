@@ -774,10 +774,20 @@ For the small size media query, we would like to set the `<h1>` of the home page
 
 ```scss
 @include mediaSm {
-  main #home h1 {
-    margin-top: 10vh;
-  }
+  body {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    main #home h1 {
+        margin-top: 10vh;
+        font-size: 1rem;
+    }
+
+    .lg-heading {
+        font-size: 3rem;
+    }
 }
 ```
 
-##
+## 
