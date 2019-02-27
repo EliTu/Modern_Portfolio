@@ -1,8 +1,16 @@
 // Extra large devices (Wide screens)
-@include mediaXl {}
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 // Large devices (Desktops & laptops)
-@include mediaLg {}
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 // Medium devices (Tablets and small laptops)
 @include mediaMd {
@@ -64,6 +72,10 @@
         grid-template-columns: 1fr;
     }
 
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 // Small devices (Smartphones)
@@ -94,5 +106,9 @@
         .bio>p {
             font-size: 1.2rem;
         }
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
     }
 }
