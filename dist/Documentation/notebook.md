@@ -1,8 +1,4 @@
-# Building a Modern Portfolio Website - By Traversy Media
-
-## Introduction
-
-In this project we will be building a responsive portfolio website from the ground up. We will be using HTML5, CSS3, SASS and a little bit of JavaScript.
+## Part 1 - Intro & SASS Workflow setup
 
 ### Overview of the finished webpage
 
@@ -50,7 +46,7 @@ We will test its functionality by going to the "main.scss" file and type some SA
 
 Next we would like to create a new Git repo, but before that we will create a new file called ".gitignore", which will create a new git file inside our folder, and inside this file we will simply write "node_modules", which will ignore the node modules and they will not be added to our repo. Afterwards we will use the terminal to initialize a new git repo, afterwards we can commit the changes as "initial setup", but we do not need to push anything into the master branch as of yet.
 
-## Building the Homepage and Main SASS
+# Part 2 - Building the Homepage and Main SASS
 
 ### Header part
 
@@ -297,6 +293,8 @@ We will select the `<body>` tag id using the `&` literal and set the background 
 }
 ```
 
+# Part 3 - Rotating Menu Button
+
 ### Creating the '\_config' SASS partial file
 
 At this point all of our SASS variables and mixins are getting numerous, and they will only get larger as the project goes, so at we would like to create a new SASS file that will act as our **partial**, meaning a component of the SASS files, which we could 'merge' with the main SASS file that we've been using so far, and thus making the code cleaner and leaner looking.
@@ -444,6 +442,7 @@ We will return to the SASS menu file and continue to work on the styles, now tha
 ```scss
 &.close {
     transform: rotate(180deg);
+}
 ```
 
 Now at this point, upon a click on the menu button it will perform a 180 degree rotation animation, which is one part of the desired effect we want, but now we need the transformation animation of each line, basically we want to form an 'X' symbol, and so we need to reposition the top and bottom lines, and make the middle one disappear. For this, we want to select each line separately (as each is represented by a `<div>` element), and so we will first select the lines with the selector `.btn-line`, and to represent each line we will use a pseudo-selector `:nth-child()` to select each one by order of position in the HTML page.
@@ -495,7 +494,7 @@ Now we would like to add the animations to each line desperately. In order for u
 }
 ```
 
-## Creating the menu and overlay
+# Part 4 - Creating the menu and overlay & Responsive Media Queries
 
 ### Setting the menu overlay
 
@@ -512,6 +511,7 @@ To work on the overlay, we will first want to set the the overlay design and the
     &.show {
         visibility: visible;
     }
+}
 ```
 
 ### Setting the menu content - portrait and Nav items
@@ -790,7 +790,7 @@ For the small size media query, we would like to set the `<h1>` of the home page
 }
 ```
 
-## Creating the 'About' page and implementing SASS function
+# Part 5 - Creating the 'About' page, styling with CSS Grid and implementing SASS function
 
 ### Creating a flexible text color setting using SASS functions
 
@@ -935,9 +935,9 @@ The main issue we will have to deal with the footer is its default position - it
 
 ```scss
 main {
-    ...
     // height: 100%;
     min-height: calc(100vh - 60px);
+}
 ```
 
 ### Making the 'About' page responsive - adding to the 'mobile' partial file
@@ -958,7 +958,7 @@ Now we would like our 'About' page to look good on medium screens anw below, and
 }
 ```
 
-## Adding the 'My Work' page & 'Contact' page
+# Part 6 - Adding the 'My Work' page & 'Contact' page, and more styling with CSS Grid and Flexbox
 
 ### Forming the 'My Work' page markup
 
@@ -1110,7 +1110,7 @@ We will first style the container box of the page items. We would like to set th
 }
 ```
 
-Next we will style the items themselves. We will add `font-size`, `border`,   `margin`, `padding` and add the `easeOut()` mixin. Next we will add some hover effects, specially we would like to scale down the `padding` as it will give the boxes a nice scale effect. Also, we change the rules for the `<span>` upon a hover, so the text that is being wrapped will change his color from `$secondary-color` to a dark color, using the `set-text-color()` function.
+Next we will style the items themselves. We will add `font-size`, `border`, `margin`, `padding` and add the `easeOut()` mixin. Next we will add some hover effects, specially we would like to scale down the `padding` as it will give the boxes a nice scale effect. Also, we change the rules for the `<span>` upon a hover, so the text that is being wrapped will change his color from `$secondary-color` to a dark color, using the `set-text-color()` function.
 
 ```scss
 .boxes {
@@ -1139,3 +1139,5 @@ Next we will style the items themselves. We will add `font-size`, `border`,   `m
   }
 }
 ```
+
+## Deploying the site online
