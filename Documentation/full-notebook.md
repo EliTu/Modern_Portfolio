@@ -1158,4 +1158,4 @@ After that, we can go to the terminal and type `npm run deploy` and it should be
 
 ### Custom Domain
 
-If we don't like the default Github Pages domain we can customize the domain in the settings. Of course, to have a custom domain we would first need to register a domain in some domain registery site.
+If we don't like the default Github Pages domain we can customize the domain in the settings. Of course, to have a custom domain we would first need to register a domain in some domain registry site.

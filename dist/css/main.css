@@ -59,7 +59,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("/dist/img/portrait.jpg");
+      background: url("dist/img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a;
       opacity: 1; }
@@ -106,7 +106,7 @@ body {
   line-height: 1.5;
   color: #fff; }
   body#bg-img {
-    background: url(/dist/img/background.jpg);
+    background: url(dist/img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
